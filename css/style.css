@@ -1,0 +1,54 @@
+:root {
+--font-titulares:"Uncut sans bold";
+--font-titulares-especiales:"Uncut sans book italic";
+--font-texto:"Uncut sans light";
+--font-textos-especiales:"Uncut sans light italic";
+--font-subtitulos:"Uncut sans medium";
+--font-subtitulos-especiales:"Uncut sans medium italic";
+--red:#be1622;
+--black:#111010;
+--white: #f6f6f6;
+--grey: #808080;
+--bordes-redondeados: 6px;
+}
+@font-face {
+    font-family: 'Uncut sans bold';
+    src: url('../fonts/UncutSans-Bold.woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Uncut sans book italic';
+    src: url('../fonts/UncutSans-BookItalic.woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Uncut sans light';
+    src: url('../fonts/UncutSans-Light.woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Uncut sans light italic';
+    src: url('../fonts/UncutSans-LightItalic.woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Uncut sans medium';
+    src: url('../fonts/UncutSans-Medium.woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Uncut sans medium italic';
+    src: url('../fonts/UncutSans-MediumItalic.woff');
+    font-weight: 500;
+    font-style: italic;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
