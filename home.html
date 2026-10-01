@@ -22,7 +22,18 @@
                     <i data-feather="search"></i>
                 </div>
                 <div class="nav-actions">
-                    <button>Registrate</button>
+                    <div class="registro">
+                       <button>Registrate</button>
+                       <form action="" id="registro-pop-up">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" required>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" required>
+                        <label for="correo">Correo</label>
+                        <input type="text" required>
+                        <button type="submit">Enviar</button>
+                       </form>
+                    </div>
                     <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro">
                             <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
                             <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
@@ -30,6 +41,7 @@
                 </div>
             </div>
         </nav>
+
         <section class="conciertos">
             <h1>Próximos conciertos</h1>
             <div class="cards">
@@ -113,6 +125,7 @@
                 </div>
             </div>
         </section>
+
         <footer>
             <div class="footer-content">
                 <div class="menu">
@@ -134,7 +147,6 @@
             </div>
         </footer>
         
-        
         <script src="https://unpkg.com/feather-icons"></script>
         <script>
            feather.replace();
@@ -142,3 +154,5 @@
         <script src="js/script.js"></script>
     </body>
 </html>
+        
+        

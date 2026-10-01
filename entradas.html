@@ -22,7 +22,18 @@
                     <i data-feather="search"></i>
                 </div>
                 <div class="nav-actions">
-                    <button>Registrate</button>
+                    <div class="registro">
+                       <button>Registrate</button>
+                       <form action="" id="registro-pop-up">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" required>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" required>
+                        <label for="correo">Correo</label>
+                        <input type="text" required>
+                        <button type="submit">Enviar</button>
+                       </form>
+                    </div>
                     <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro">
                             <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
                             <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
@@ -30,6 +41,7 @@
                 </div>
             </div>
         </nav>
+
         <section class="entradas">
             <h1>ADQUIERE AQUI TUS ENTRADAS</h1>
             <form action="">
@@ -41,15 +53,24 @@
                         <button id="suma" class="btn-numero">+</button>
                     </div>
                 </div>
-                <select name="" id="">
-                    <option value="E1">VIP(370€)</option>
-                    <option value="E2">Butacas delanteras(250€)</option>
-                    <option value="E2">Butacas intermedias(130€)</option>
-                    <option value="E2">Butacas traseras (80€)</option>
-                </select>
+               <div class="cuestionario-entradas">
+                    <label for="tipo-ticket">
+                        Selecciona el tipo
+                    </label>
+                    <select name="" id="">
+                        <option value="" selected disabled></option>
+                        <option value="E1">VIP (370€)</option>
+                        <option value="E2">Butacas delanteras(250€)</option>
+                        <option value="E2">Butacas intermedias(130€)</option>
+                        <option value="E2">Butacas traseras (80€)</option>
+                    </select>
+               </div>
+               <p>Precio total: <span id="coste-total"></span></p>
+               <button class="btn-rojo">Comprar</button>
+               <p class="advertencia">Advertencia: entradas no asequibles para menores de 18</p>
             </form>
         </section>
-        
+
         <footer>
             <div class="footer-content">
                 <div class="menu">
@@ -77,6 +98,9 @@
         </script>
         <script src="js/script.js"></script>
    </body>
+</html>
+
 
     
-</html>
+        
+               
