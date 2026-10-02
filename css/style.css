@@ -310,3 +310,26 @@ nav {
     text-decoration: underline;
     color: var(--black);
 }
+
+.conciertos {
+    
+    background: var(--white);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.card-item {
+    background: var(--grey);
+    color: var(--black);
+    gap: 4rem;
+    border-radius: var(--bordes-redondeados);
+}
+
+.info {
+    align-items: center;
+}
