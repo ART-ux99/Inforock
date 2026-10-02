@@ -1,54 +1,312 @@
 :root {
---font-titulares:"Uncut sans bold";
---font-titulares-especiales:"Uncut sans book italic";
---font-texto:"Uncut sans light";
---font-textos-especiales:"Uncut sans light italic";
---font-subtitulos:"Uncut sans medium";
---font-subtitulos-especiales:"Uncut sans medium italic";
+--font: "Uncut sans", "Segoe UI", "Arial", sans-serif;
 --red:#be1622;
 --black:#111010;
 --white: #f6f6f6;
 --grey: #808080;
+--peso-titulares: 700;
+--peso-texto: 300;
+--peso-subtitulos: 500;
+--peso-book: 400;
 --bordes-redondeados: 6px;
+
+--bg: var(--white);
+--text: var(--black);
+--card: var(--grey);
+--card-text: var(--black);
+--card-btn-bg: var(--red);
+--card-btn-text: var(--white);
 }
+
+[data-theme="dark"] {
+--bg: var(--black);
+--text: var(--white);
+--card: var(--red);
+--card-text: var(--white);
+--card-btn-bg: var(--white);
+--card-btn-text: var(--black);
+}
+
 @font-face {
-    font-family: 'Uncut sans bold';
+    font-family: 'Uncut sans';
     src: url('../fonts/UncutSans-Bold.woff');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Uncut sans book italic';
+    font-family: 'Uncut sans';
     src: url('../fonts/UncutSans-BookItalic.woff');
     font-weight: 400;
     font-style: italic;
 }
 @font-face {
-    font-family: 'Uncut sans light';
+    font-family: 'Uncut sans';
     src: url('../fonts/UncutSans-Light.woff');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Uncut sans light italic';
+    font-family: 'Uncut sans';
     src: url('../fonts/UncutSans-LightItalic.woff');
     font-weight: 300;
     font-style: italic;
 }
 @font-face {
-    font-family: 'Uncut sans medium';
+    font-family: 'Uncut sans';
     src: url('../fonts/UncutSans-Medium.woff');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Uncut sans medium italic';
+    font-family: 'Uncut sans';
     src: url('../fonts/UncutSans-MediumItalic.woff');
     font-weight: 500;
     font-style: italic;
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    line-height: 1.5;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-rojo,.btn-negro {
+    display: inline-block;
+    border: none;
+    border-radius: var(--bordes-redondeados);
+    padding: 0.6rem 1.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.btn-rojo {
+    background: var(--red);
+}
+
+.btn-negro {
+    background: var(--black);
+}
+
+nav {
+    position: relative;
+    background: var(--red);
+    color: var(--white);
+    padding: 3rem 4rem;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hamburger{
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.hamburger svg.feather {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1.5rem;
+    z-index: 50;
+    list-style: none;
+    background: var(--black);
+    border-radius: var(--bordes-redondeados);
+    padding: 1rem 2rem;
+    min-width: 10rem;
+}
+
+.nav-links.is-open{
+    display: block;
+}
+
+.nav-links li+li {
+    margin-top: 0.8rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: var(--peso-titulares);
+}
+
+.logo img {
+    height: 4.5rem;
+    width: 4.5rem;
+    object-fit: cover;
+}
+
+.buscador {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    background: var(--grey);
+    color: var(--black);
+    border: none;
+    border-radius: var(--bordes-redondeados);
+    padding: 0.6rem 1rem;
+}
+
+.buscador input::placeholder {
+    color: var(--black);
+    opacity: 0.5;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.registro {
+    position: relative;
+}
+
+.registro > button {
+    background: var(--black);
+    color: var(--white);
+    border-radius: var(--bordes-redondeados);
+    padding: 1rem;
+    border: none;
+}
+
+#registro-pop-up {
+    display: none;  
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    z-index: 50;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 17rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: var(--bordes-redondeados);
+    padding: 1.2rem;
+}
+
+.registro.is-open #registro-pop-up {
+    display: flex;
+}
+
+#registro-pop-up input {
+    background: var(--white);
+    border: none;
+    border-radius: var(--bordes-redondeados);
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+#registro-pop-up button {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: var(--bordes-redondeados);
+    padding: 0.5rem 1rem;
+}
+
+.theme-toggle {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--black);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.theme-toggle__icon--moon {
+    display: none;
+}
+
+:root [data-theme="dark"] .theme-toggle__icon--moon {
+    display: inline;
+}
+
+:root [data-theme="dark"] .theme-toggle__icon--sun {
+    display: none;
+}
+
+.novedades {
+    display: flex;
+    align-items: center;
+    background-color: var(--grey);
+    color: var(--black);
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+}
+
+.novedades button {
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    color: var(--white);
+    align-self: flex-start;
+}
+
+.novedades .btn-rojo {
+    white-space: nowrap;
+    font-size: 1.2rem;
+}
+
+.novedades a {
+    text-decoration: underline;
+    color: var(--black);
 }
