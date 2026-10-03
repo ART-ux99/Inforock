@@ -594,6 +594,28 @@ svg.feather {
     font-size: 1.2rem;
 }
 
+/* ESCRIBENOS */
+.escribir {
+    flex: 1;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    width: 100%;
+    max-width: 70rem;
+}
+
+.escribir h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: var(--peso-titulares);
+    padding: 2rem;
+}
+
+.contactanos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 /* FOOTER */
 footer {
     background-color: var(--red);
