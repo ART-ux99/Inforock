@@ -51,7 +51,38 @@
 
         <section class="entradas">
             <h1>ADQUIERE AQUI TUS ENTRADAS</h1>
-            <form action="">
+           <div class="entrada-layout">
+             <div class="tipos-entradas">
+                    <div class="nombres-precios">
+                        <div class="texto">
+                            <h2>VIP</h2>
+                            <p>370€</p>
+                        </div>
+                        <button type="button" class="btn-info">Más info</button>
+                    </div>
+                    <div class="nombres-precios">
+                        <div class="texto">
+                            <h2>Butacas delanteras</h2>
+                            <p>250€</p>
+                        </div>
+                        <button type="button" class="btn-info">Más info</button>
+                    </div>
+                    <div class="nombres-precios">
+                        <div class="texto">
+                            <h2>Butacas intermedias</h2>
+                            <p>130€</p>
+                        </div>
+                        <button type="button" class="btn-info">Más info</button>
+                    </div>
+                    <div class="nombres-precios">
+                        <div class="texto">
+                            <h2>Butacas traseras</h2>
+                            <p>80€</p>
+                        </div>
+                        <button type="button" class="btn-info">Más info</button>
+                    </div>
+             </div>
+             <form class="form-entradas" action="">
                 <div class="cantidad">
                     <p>Selecciona la cantidad</p>
                     <div class="contador">
@@ -66,17 +97,19 @@
                     </label>
                     <select name="" id="">
                         <option value="" selected disabled></option>
-                        <option value="E1">VIP (370€)</option>
-                        <option value="E2">Butacas delanteras(250€)</option>
-                        <option value="E2">Butacas intermedias(130€)</option>
-                        <option value="E2">Butacas traseras (80€)</option>
+                        <option value="E1">VIP</option>
+                        <option value="E2">Butacas delanteras</option>
+                        <option value="E2">Butacas intermedias</option>
+                        <option value="E2">Butacas traseras</option>
                     </select>
                </div>
                <p>Precio total: <span id="coste-total"></span></p>
                <button class="btn-rojo">Comprar</button>
                <p class="advertencia">Advertencia: entradas no asequibles para menores de 18</p>
-            </form>
-        </section>
+             </form>
+          </div>
+     </section>
+
 
         <footer>
             <div class="footer-content">
