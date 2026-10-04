@@ -284,7 +284,7 @@ nav {
     display: none;
 }
 
-/* NOVEDADES */
+/* MODAL NOVEDADES */
 .novedades {
     display: flex;
     align-items: center;
@@ -409,6 +409,52 @@ svg.feather {
     border-radius: var(--bordes-redondeados);
     text-decoration: none;
     padding: 1rem;
+}
+
+/* MODAL COOKIES */
+
+.cookies {
+    position: fixed;
+    inset: auto 0 0 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: none;
+    background: #ffffff;
+    color: var(--black);
+    padding: 1rem 3rem 1.5rem;
+    z-index: 30;
+}
+
+.cookies[open] {
+    display: block;
+}
+
+.cookies h2 {
+    font-size: 1.4rem;
+    font-weight: var(--peso-subtitulos);
+}
+
+.cookies-cerrar {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    display: grid;
+    place-items: center;
+    background: none;
+    color: var(--black);
+}
+
+.btn-cookies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.btn-cookies button {
+    min-width: 12rem;
 }
 
 /* ENTRADAS */
@@ -736,4 +782,77 @@ footer {
     gap: 1rem;
     font-weight: var(--peso-texto);
     font-size: 1.2rem;
+}
+
+.contacto a {
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .nav-content {
+        gap: 1rem;
+    }
+
+    .nav-links {
+        left: 1rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+    .nav-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .theme-toggle {
+        align-self: center;
+    }
+
+    .registro > button {
+        padding: 0.5rem 2rem;
+    }
+
+    .conciertos,
+    .noticias {
+        padding-inline: 1.2rem;
+    }
+
+    .card-item {
+        flex-basis: calc((100% - 2 * 2rem));
+    }
+
+    .info {
+        font-size: 0.8rem;
+    }
+
+    .noticia-img {
+        flex-basis: 15rem;
+    }
+
+    .noticias-item {
+        padding: 1.5rem;
+        border-radius: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .entrada-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tipos-entradas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
 }
