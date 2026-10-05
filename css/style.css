@@ -1,5 +1,6 @@
 :root {
     --font: "Uncut sans", "Segoe UI", "Arial", sans-serif;
+    --font2: "Montserrat";
     --red:#be1622;
     --black:#111010;
     --white: #f6f6f6;
@@ -16,6 +17,8 @@
     --card-text: var(--black);
     --card-btn-bg: var(--red);
     --card-btn-text: var(--white);
+    --btn-black: var(--black);
+    --btn-black-text: var(--white);
 }
 
 [data-theme="dark"] {
@@ -25,6 +28,8 @@
     --card-text: var(--white);
     --card-btn-bg: var(--white);
     --card-btn-text: var(--black);
+    --btn-black: var(--white);
+    --btn-black-text: var(--black);
 }
 
 @font-face {
@@ -62,6 +67,13 @@
     src: url('../fonts/UncutSans-MediumItalic.woff');
     font-weight: 500;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/MontserratAlternates-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
 }
 
 *{
@@ -109,7 +121,8 @@ button {
 }
 
 .btn-negro {
-    background: var(--black);
+    background: var(--btn-black);
+    color: var(--btn-black-text);
 }
 
 /* NAVEGADOR */
@@ -306,6 +319,7 @@ nav {
 .novedades .btn-rojo {
     white-space: nowrap;
     font-size: 1.2rem;
+    font-family: var(--font2);
 }
 
 .novedades a {
@@ -326,6 +340,7 @@ nav {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 3rem;
+    font-family: var(--font2);
 }
 
 .cards {
@@ -355,7 +370,7 @@ nav {
     justify-content: space-between;
     gap: 1rem;
     font-size: 0.85rem;
-    font-weight: var(--peso-texto);
+    font-weight: var(--peso-titulares);
 }
 
 .info span:last-child {
@@ -399,6 +414,7 @@ svg.feather {
 
 .card-body h2 {
     font-weight: var(--peso-titulares);
+    font-family: var(--font2);
 }
 
 .card-body a {
@@ -474,6 +490,7 @@ svg.feather {
     text-align: center;
     font-weight: var(--peso-titulares);
     margin-bottom: 2rem;
+    font-family: var(--font2);
 }
 
 .entrada-layout {
@@ -625,6 +642,7 @@ svg.feather {
     text-align: center;
     font-weight: var(--peso-titulares);
     margin-bottom: 1rem;
+    font-family: var(--font2);
 }
 .card-noticias{
     display: flex;
@@ -665,11 +683,11 @@ svg.feather {
 .contenido-noticias h2 {
     font-weight: var(--peso-titulares);
     font-size: 1.6rem;
-    background: var(--red);
     text-align: center;
     padding: 0.4rem 0.9rem;
     margin-bottom: 0.6rem;
     color: #ffffff;
+    font-family: var(--font2);
 }
 
 .contenido-noticias h3 {
@@ -697,6 +715,7 @@ svg.feather {
     text-align: center;
     font-weight: var(--peso-titulares);
     margin-bottom: 2rem;
+    font-family: var(--font2);
 }
 
 #contactanos {
@@ -760,6 +779,10 @@ footer {
     gap: 0.5rem;
 }
 
+.menu h3 {
+    font-family: var(--font2);
+}
+
 .menu a {
     color: var(--white);
     text-decoration: none;
@@ -773,6 +796,10 @@ footer {
     align-items: center;
     text-align: center;
     gap: 0.5rem;
+}
+
+.contacto h3 {
+    font-family: var(--font2);
 }
 
 .contacto span {
