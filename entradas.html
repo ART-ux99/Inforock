@@ -87,7 +87,7 @@
                     <p>Selecciona la cantidad:</p>
                     <div class="contador">
                         <button id="resta" class="btn-numero">-</button>
-                        <span class="numero">0</span>
+                        <span class="numero" id="cantidadT">0</span>
                         <button id="suma" class="btn-numero">+</button>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                     <label for="tipo-ticket">
                         Selecciona el tipo:
                     </label>
-                    <select name="" id="">
+                    <select name="" id="tipo-ticket">
                         <option value="" selected disabled>Elige una opcion</option>
                         <option value="E1">VIP</option>
                         <option value="E2">Butacas delanteras</option>
@@ -104,7 +104,7 @@
                     </select>
                </div>
                 <p class="precio-total">Precio total: <span id="coste-total">0,00€</span></p>
-               <button class="btn-rojo" type="submit" disabled>Comprar</button>
+               <button class="btn-rojo" type="submit" disabled id="comprar">Comprar</button>
                <p class="advertencia">*Advertencia: entradas no asequibles para menores de 18</p>
              </form>
           </div>

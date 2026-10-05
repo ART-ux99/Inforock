@@ -100,7 +100,81 @@
             novedades.remove();     
         });
     }
+
+    function iniciarCookies() {
+        const cookies = document.querySelector('dialog.cookies')
+        if(!cookies) return;
+
+        const CLAVE = 'inforock-cookies';
+
+        if(!leer(localStorage, CLAVE)) {
+            cookies.show();
+        }
+
+        cookies.addEventListener('click', function(evento) {
+            const boton = evento.target.closest('[data-cookie]');
+            if(!boton) return;
+
+            const eleccion = boton.dataset.cookie;
+
+            if(eleccion === 'accept'|| eleccion === 'reject') {
+                guardar(localStorage,CLAVE,eleccion === 'accept'?'accepted':'rejected');
+                cookies.close();
+            } else if (eleccion === 'close') {
+
+                cookies.close();
+            }
+        });
+    }
      
+    function iniciarEntradas() {
+            const form = document.getElementsByClassName('form-entradas');
+            if(!form) return;
+
+            const MAX_ENTRADAS = 10;
+
+            const botonMenos = document.getElementById('resta');
+            const botonMas = document.getElementById('suma');
+            const cantidadT = document.getElementById('cantidadT');
+            const tipoT = document.getElementById('tipo-ticket');
+            const totalT = document.getElementById('coste-total');
+            const botonComprar = document.getElementById('comprar');
+
+            const euro = new Intl.NumberFormat('es-ES',{style:'currency', currency: 'EUR'});
+            let cantidad = 0;
+
+            function precioUnitario(){
+                const opcion = tipoT.options[tipoT.selectedIndex];
+                return Number(opcion && opcion.dataset.precio) || 0;
+            }
+
+            function actualizar() {
+                const precio = precioUnitario();
+                cantidadT.textContent = cantidad;
+                totalT.textContent = euro.format(cantidad*precio);
+                botonMenos.disabled = cantidad === 0;
+                botonMas.disabled = cantidad === MAX_ENTRADAS;
+                botonComprar.disabled = cantidad === 0 || precio === 0
+            }
+
+            botonMas.addEventListener('click', function() {
+                if(cantidad < MAX_ENTRADAS) cantidad++;
+                actualizar();
+            });
+
+            botonMenos.addEventListener('click', function() {
+                if(cantidad > 0) cantidad--;
+                actualizar();
+            });
+
+            tipoT.addEventListener('change', function() {
+                actualizar();
+            });
+        
+    }
+
     iniciarDesplegables();
     iniciarNovedades();
+    iniciarCookies();
+    iniciarEntradas();
 })();

@@ -140,12 +140,13 @@
         </section>
 
         <dialog class="cookies">
+            <button type="button" class="cookies-cerrar" data-cookie="close" aria-label="Cerrar sin elegir"><i data-feather="x" aria-hidden="true"></i></button>
             <h2>Política de cookies</h2>
             <p>Utilizamos cookies propias para mejorar la calidad de la web y conocer tus preferencias.</p>
             <div class="btn-cookies">
-              <button class="btn-negro">Tus elecciones privadas</button>
-              <button class="btn-rojo">Rechazar cookies</button>
-              <button class="btn-rojo">Aceptar cookies</button>
+              <button class="btn-negro" type="button" data-cookie="preferences">Tus elecciones privadas</button>
+              <button class="btn-rojo" type="button" data-cookie="reject">Rechazar cookies</button>
+              <button class="btn-rojo" type="button" data-cookie="accept">Aceptar cookies</button>
             </div>
         </dialog>
 
