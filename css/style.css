@@ -125,6 +125,7 @@ button {
     color: var(--btn-black-text);
 }
 
+
 /* NAVEGADOR */
 nav {
     position: relative;
@@ -153,7 +154,7 @@ nav {
 .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 1.5rem;
     z-index: 50;
     list-style: none;
@@ -273,28 +274,27 @@ nav {
 }
 
 .theme-toggle {
-    display: grid;
-    place-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--black);
+    background: var(--white);
     border: none;
     border-radius: 50%;
-    background: var(--white);
-    color: var(--black);
-    font-size: 1.5rem;
-    line-height: 1;
+    cursor: pointer;
 }
 
 .theme-toggle__icon--moon {
     display: none;
 }
 
-:root [data-theme="dark"] .theme-toggle__icon--moon {
-    display: inline;
+[data-theme="dark"] .theme-toggle__icon--sun {
+    display: none;
 }
 
-:root [data-theme="dark"] .theme-toggle__icon--sun {
-    display: none;
+[data-theme="dark"] .theme-toggle__icon--moon {
+    display: inline;
 }
 
 /* MODAL NOVEDADES */
@@ -496,7 +496,7 @@ svg.feather {
 .entrada-layout {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
-    gap: 1.5rem;
+    gap: 3.5rem;
     align-items: center;
 }
 
@@ -546,7 +546,6 @@ svg.feather {
 .form-entradas {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 2rem;
     font-size: 1.5rem;
 }
@@ -595,12 +594,12 @@ svg.feather {
     font-size: 1.1rem;
 }
 
-/* .precio-total {
+.precio-total {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.6rem;
-} */
+    font-weight: var(--peso-texto);
+}
 
 #coste-total {
     display: grid;
@@ -618,11 +617,10 @@ svg.feather {
     padding: 0.8rem 3rem;
 }
 
-/* .mensaje-compra {
-    min-height: 1.5rem;
-    font-size: 1.05rem;
-    font-weight: var(--peso-subtitulos);
-} */
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
 
 .advertencia {
     font-size: 1rem;

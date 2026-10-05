@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var STORAGE_KEY = 'coolcats-tema';
+    var STORAGE_KEY = 'inforock';
     var root = document.documentElement; 
 
     function getSavedTheme() {
