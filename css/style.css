@@ -440,7 +440,7 @@ svg.feather {
     border: none;
     background: #ffffff;
     color: var(--black);
-    padding: 1rem 3rem 1.5rem;
+    padding: 1rem 4rem 1.5rem;
     z-index: 30;
 }
 
@@ -459,6 +459,7 @@ svg.feather {
     left: 1rem;
     display: grid;
     border: none;
+    outline: none;
     place-items: center;
     background: none;
     color: var(--black);

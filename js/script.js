@@ -128,7 +128,7 @@
     }
      
     function iniciarEntradas() {
-            const form = document.getElementsByClassName('form-entradas');
+            const form = document.getElementById('form-entrada');
             if(!form) return;
 
             const MAX_ENTRADAS = 10;

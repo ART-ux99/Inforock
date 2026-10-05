@@ -82,13 +82,13 @@
                         <button type="button" class="btn-info">Más info</button>
                     </div>
              </div>
-             <form class="form-entradas" action="">
+             <form class="form-entradas" action="" id="form-entrada">
                 <div class="cantidad">
                     <p>Selecciona la cantidad:</p>
                     <div class="contador">
-                        <button id="resta" class="btn-numero">-</button>
+                        <button id="resta" class="btn-numero" type="button">-</button>
                         <span class="numero" id="cantidadT">0</span>
-                        <button id="suma" class="btn-numero">+</button>
+                        <button id="suma" class="btn-numero" type="button">+</button>
                     </div>
                 </div>
                <div class="cuestionario-entradas">
@@ -97,10 +97,10 @@
                     </label>
                     <select name="" id="tipo-ticket">
                         <option value="" selected disabled>Elige una opcion</option>
-                        <option value="E1">VIP</option>
-                        <option value="E2">Butacas delanteras</option>
-                        <option value="E2">Butacas intermedias</option>
-                        <option value="E2">Butacas traseras</option>
+                        <option value="E1" data-precio="370">VIP</option>
+                        <option value="E2" data-precio="250">Butacas delanteras</option>
+                        <option value="E2" data-precio="130">Butacas intermedias</option>
+                        <option value="E2" data-precio="80">Butacas traseras</option>
                     </select>
                </div>
                 <p class="precio-total">Precio total: <span id="coste-total">0,00€</span></p>
