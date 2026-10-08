@@ -442,6 +442,7 @@ svg.feather {
     color: var(--black);
     padding: 1rem 4rem 1.5rem;
     z-index: 30;
+    text-align: center;
 }
 
 .cookies[open] {
@@ -475,6 +476,11 @@ svg.feather {
 
 .btn-cookies button {
     min-width: 12rem;
+}
+
+.btn-pref {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
 }
 
 /* ENTRADAS */
@@ -756,6 +762,23 @@ button:disabled {
     max-width: 15rem;
 }
 
+fieldset {
+    border: none;
+}
+
+legend {
+    margin-bottom: 1rem;
+}
+
+.opciones {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.cards-opciones {
+    width: 5% !important;
+}
 
 /* FOOTER */
 footer {
